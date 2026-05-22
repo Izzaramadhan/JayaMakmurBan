@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#fffbeb"/>
+  <circle cx="450" cy="295" r="185" fill="#111827"/>
+  <circle cx="450" cy="295" r="120" fill="#475569"/>
+  <circle cx="450" cy="295" r="62" fill="#f8fafc"/>
+  <g fill="none" stroke="#94a3b8" stroke-width="12">
+    <circle cx="450" cy="295" r="155"/>
+    <circle cx="450" cy="295" r="88"/>
+  </g>
+  <g stroke="#facc15" stroke-width="14" stroke-linecap="round">
+    <path d="M450 230v130M385 295h130M405 250l90 90M405 340l90-90"/>
+  </g>
+  <text x="450" y="540" text-anchor="middle" font-family="Arial" font-size="42" font-weight="700" fill="#0f172a">Dunlop SP Touring</text>
+</svg>

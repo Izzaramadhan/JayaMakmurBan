@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#f1f5f9"/>
+  <circle cx="450" cy="295" r="180" fill="#1e293b"/>
+  <circle cx="450" cy="295" r="142" fill="#cbd5e1"/>
+  <circle cx="450" cy="295" r="55" fill="#0f172a"/>
+  <g fill="#facc15">
+    <path d="M450 145l35 105-35 45-35-45z"/>
+    <path d="M450 445l-35-105 35-45 35 45z"/>
+    <path d="M300 295l105-35 45 35-45 35z"/>
+    <path d="M600 295l-105 35-45-35 45-35z"/>
+    <path d="M344 189l96 50 10 56-56-10z"/>
+    <path d="M556 401l-96-50-10-56 56 10z"/>
+    <path d="M344 401l50-96 56-10-10 56z"/>
+    <path d="M556 189l-50 96-56 10 10-56z"/>
+  </g>
+  <text x="450" y="540" text-anchor="middle" font-family="Arial" font-size="42" font-weight="700" fill="#0f172a">Velg HSR Ring 15</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#f8fafc"/>
+  <circle cx="450" cy="300" r="180" fill="#0f172a"/>
+  <circle cx="450" cy="300" r="105" fill="#334155"/>
+  <circle cx="450" cy="300" r="58" fill="#e2e8f0"/>
+  <g stroke="#facc15" stroke-width="16" stroke-linecap="round">
+    <path d="M450 120v55M450 425v55M270 300h55M575 300h55M323 173l40 40M537 387l40 40M323 427l40-40M537 213l40-40"/>
+  </g>
+  <text x="450" y="540" text-anchor="middle" font-family="Arial" font-size="42" font-weight="700" fill="#0f172a">Bridgestone Ecopia</text>
+</svg>
