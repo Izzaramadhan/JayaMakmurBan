@@ -1,12 +1,14 @@
 export const business = {
   name: "Jaya Makmur Ban Klaten",
   shortName: "Jaya Makmur Ban",
-  tagline: "Spesialis Ban, Velg, Spooring & Balancing di Klaten",
-  phoneDisplay: "0812-3456-7890",
-  phoneWa: "6281234567890",
-  address: "Jl. Raya Klaten No. 123, Klaten, Jawa Tengah",
-  hours: "Setiap hari, 08.00 - 17.00 WIB",
-  mapsLabel: "Kabupaten Klaten, Jawa Tengah",
+  tagline: "Distributor Ban Terpercaya di Klaten",
+  phoneDisplay: "0857-1382-2297",
+  phoneWa: "6285713822297",
+  instagram: "@jmbanklaten",
+  instagramUrl: "https://www.instagram.com/jmbanklaten/",
+  address: "Klaten, Jawa Tengah",
+  hours: "Hubungi admin untuk informasi jam operasional terbaru",
+  mapsLabel: "Jaya Makmur Ban Klaten",
 };
 
 export const navItems = [
@@ -14,74 +16,135 @@ export const navItems = [
   { label: "Keunggulan", href: "#keunggulan" },
   { label: "Katalog", href: "#katalog" },
   { label: "Layanan", href: "#layanan" },
-  { label: "Booking", href: "#booking" },
+  { label: "Tanya Stok", href: "#booking" },
   { label: "Kontak", href: "#kontak" },
 ];
 
 export const products = [
   {
-    name: "Bridgestone Ecopia",
-    type: "Ban Harian",
-    price: "Mulai Rp 500.000",
-    stock: "Ready Stock",
+    name: "Ban Motor Harian",
+    type: "Ban Motor",
+    price: "Hubungi Admin",
+    stock: "Tanya Stok",
     image: "/images/ban1.svg",
-    description: "Cocok untuk penggunaan harian dengan kenyamanan dan efisiensi bahan bakar.",
+    description:
+      "Pilihan ban untuk kebutuhan berkendara harian dengan berbagai merek dan ukuran.",
   },
   {
-    name: "Dunlop SP Touring",
-    type: "Ban Mobil",
-    price: "Mulai Rp 450.000",
-    stock: "Ready Stock",
+    name: "Ban Tubeless",
+    type: "Ban Tubeless",
+    price: "Hubungi Admin",
+    stock: "Tanya Stok",
     image: "/images/ban2.svg",
-    description: "Pilihan ekonomis untuk perjalanan dalam kota maupun luar kota.",
+    description:
+      "Ban praktis dan nyaman digunakan untuk aktivitas harian dengan pilihan ukuran yang beragam.",
   },
   {
-    name: "Velg HSR Ring 15",
-    type: "Velg Racing",
-    price: "Rp 3.500.000",
-    stock: "Pre-Order",
-    image: "/images/velg.svg",
-    description: "Tampilan sporty untuk mobil harian dengan pilihan model yang beragam.",
+    name: "Ban Motor Matic",
+    type: "Motor Matic",
+    price: "Hubungi Admin",
+    stock: "Tanya Stok",
+    image: "/images/ban1.svg",
+    description:
+      "Tersedia berbagai pilihan ban untuk motor matic sesuai kebutuhan pelanggan.",
+  },
+  {
+    name: "Ban Motor Bebek",
+    type: "Motor Bebek",
+    price: "Hubungi Admin",
+    stock: "Tanya Stok",
+    image: "/images/ban2.svg",
+    description:
+      "Pilihan ban untuk motor bebek dengan ukuran dan merek yang dapat ditanyakan langsung ke admin.",
+  },
+  {
+    name: "Ban Motor Sport",
+    type: "Motor Sport",
+    price: "Hubungi Admin",
+    stock: "Tanya Stok",
+    image: "/images/ban1.svg",
+    description:
+      "Ban untuk kebutuhan motor sport dengan pilihan merek dan ukuran yang beragam.",
+  },
+  {
+    name: "Ban Kendaraan Lainnya",
+    type: "Katalog Ban",
+    price: "Hubungi Admin",
+    stock: "Tanya Stok",
+    image: "/images/ban2.svg",
+    description:
+      "Pelanggan dapat menanyakan rekomendasi ban sesuai jenis kendaraan dan kebutuhan penggunaan.",
   },
 ];
 
 export const services = [
   {
-    title: "Ganti Ban",
+    title: "Penjualan Ban",
     icon: "🛞",
-    description: "Pemasangan ban baru dengan pengecekan tekanan angin dan kondisi ban.",
+    description:
+      "Menyediakan berbagai pilihan ban untuk kebutuhan kendaraan pelanggan di wilayah Klaten dan sekitarnya.",
   },
   {
-    title: "Spooring",
-    icon: "🧭",
-    description: "Membantu menjaga arah kemudi tetap stabil dan mengurangi keausan ban tidak merata.",
+    title: "Pemasangan Ban",
+    icon: "🔧",
+    description:
+      "Pelanggan dapat membeli ban sekaligus melakukan pemasangan di cabang Jaya Makmur Ban terdekat.",
   },
   {
-    title: "Balancing",
-    icon: "⚙️",
-    description: "Menyeimbangkan putaran roda agar berkendara lebih nyaman dan minim getaran.",
-  },
-  {
-    title: "Konsultasi Ban & Velg",
+    title: "Konsultasi Ukuran Ban",
     icon: "💬",
-    description: "Rekomendasi ukuran ban dan velg sesuai kebutuhan serta tipe kendaraan.",
+    description:
+      "Membantu pelanggan memilih ukuran ban yang sesuai dengan jenis kendaraan dan kebutuhan berkendara.",
+  },
+  {
+    title: "Tanya Stok via WhatsApp",
+    icon: "📱",
+    description:
+      "Pelanggan dapat menanyakan ketersediaan stok, ukuran, dan harga ban sebelum datang ke toko.",
   },
 ];
 
 export const benefits = [
   {
-    title: "Bebas Antre Lama",
-    icon: "⏰",
-    description: "Booking jadwal lewat WhatsApp, lalu datang sesuai waktu yang sudah disepakati.",
-  },
-  {
     title: "Katalog Online",
     icon: "📦",
-    description: "Pelanggan dapat mengecek pilihan ban dan velg sebelum datang ke bengkel.",
+    description:
+      "Pelanggan dapat melihat pilihan produk ban secara online sebelum datang langsung ke cabang.",
   },
   {
-    title: "SEO Lokal Klaten",
+    title: "Tanya Stok Lebih Mudah",
+    icon: "📱",
+    description:
+      "Informasi stok, ukuran, dan harga ban bisa ditanyakan langsung melalui WhatsApp.",
+  },
+  {
+    title: "Lokasi di Klaten",
     icon: "📍",
-    description: "Website membantu bengkel lebih mudah ditemukan calon pelanggan di wilayah Klaten.",
+    description:
+      "Jaya Makmur Ban hadir sebagai pilihan toko ban yang mudah dijangkau di wilayah Klaten.",
+  },
+  {
+    title: "Layanan Praktis",
+    icon: "✅",
+    description:
+      "Pelanggan bisa mencari informasi produk, menghubungi admin, dan datang ke cabang sesuai kebutuhan.",
+  },
+];
+
+export const branches = [
+  {
+    name: "Jaya Makmur Ban 1",
+    location: "Utara Pasar Gentongan",
+    mapsUrl: "https://maps.app.goo.gl/WLFExatkxNFsp54w7",
+  },
+  {
+    name: "Jaya Makmur Ban 2",
+    location: "Gumulan",
+    mapsUrl: "https://maps.app.goo.gl/BeBLUu56s8uTiCM18",
+  },
+  {
+    name: "Jaya Makmur Ban 3",
+    location: "Selatan Kampus Unwidha Klaten",
+    mapsUrl: "https://maps.app.goo.gl/5bEyzDm3yW7S1uA36",
   },
 ];
