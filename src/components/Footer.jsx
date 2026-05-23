@@ -1,48 +1,154 @@
-import { business } from "../data/siteData";
+import { business, branches, navItems } from "../data/siteData";
 import { createWhatsAppLink } from "../utils";
+
+const NAVBAR_OFFSET = 100;
 
 export default function Footer() {
   const whatsappLink = createWhatsAppLink(
     business.phoneWa,
-    `Halo Admin ${business.shortName}, saya ingin bertanya tentang layanan bengkel.`
+    `Halo Admin ${business.shortName}, saya ingin bertanya tentang stok, ukuran, dan harga ban.`
   );
 
+  function handleFooterNavClick(event, href) {
+    event.preventDefault();
+
+    const sectionId = href.replace("#", "");
+    const sectionElement = document.getElementById(sectionId);
+
+    if (!sectionElement) return;
+
+    const targetPosition =
+      sectionElement.getBoundingClientRect().top +
+      window.scrollY -
+      NAVBAR_OFFSET;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    });
+  }
+
   return (
-    <footer id="kontak" className="bg-slate-900 px-4 py-14 text-slate-300">
-      <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2">
-        <div className="overflow-hidden rounded-3xl border border-slate-700 shadow-xl">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126485.49525647565!2d110.51817395000001!3d-7.6975252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a46ab41995871%3A0xc0fb13a0c647b018!2sKabupaten%20Klaten%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1716160000000!5m2!1sid!2sid"
-            width="100%"
-            height="320"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title={`Lokasi ${business.shortName}`}
-          />
+    <footer id="kontak" className="bg-slate-950 px-4 py-16 text-white">
+      <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_0.9fr_1.1fr]">
+        <div>
+          <h2 className="text-2xl font-black">
+            <span className="text-yellow-400">Jaya Makmur</span> Ban
+          </h2>
+
+          <p className="mt-4 max-w-md leading-7 text-slate-300">
+            {business.name} merupakan toko ban di Klaten yang membantu
+            pelanggan mendapatkan informasi produk, stok, ukuran ban, dan lokasi
+            cabang yang dapat dikunjungi.
+          </p>
+
+          <div className="mt-6 flex flex-col gap-3">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex w-fit items-center justify-center rounded-full bg-yellow-400 px-5 py-3 font-bold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-yellow-300"
+            >
+              Hubungi WhatsApp
+            </a>
+
+            <a
+              href={business.instagramUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex w-fit items-center justify-center rounded-full border border-white/30 px-5 py-3 font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-slate-950"
+            >
+              Instagram {business.instagram}
+            </a>
+          </div>
         </div>
 
-        <div className="flex flex-col justify-center">
-          <p className="font-bold uppercase tracking-[0.25em] text-yellow-400">Kontak</p>
-          <h2 className="mt-3 text-3xl font-black text-white">{business.name}</h2>
-          <div className="mt-6 space-y-3 text-slate-300">
-            <p>📍 {business.address}</p>
-            <p>🕒 {business.hours}</p>
-            <p>📱 WhatsApp: {business.phoneDisplay}</p>
+        <div>
+          <h3 className="text-lg font-extrabold text-yellow-400">
+            Menu Website
+          </h3>
+
+          <ul className="mt-5 space-y-3 text-slate-300">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  onClick={(event) => handleFooterNavClick(event, item.href)}
+                  className="inline-block transition duration-300 hover:translate-x-1 hover:text-yellow-400"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+            <p className="text-sm font-bold text-yellow-400">Kontak Utama</p>
+
+            <div className="mt-3 space-y-2 text-sm leading-6 text-slate-300">
+              <p>
+                <span className="font-semibold text-white">WhatsApp:</span>{" "}
+                {business.phoneDisplay}
+              </p>
+
+              <p>
+                <span className="font-semibold text-white">Instagram:</span>{" "}
+                {business.instagram}
+              </p>
+
+              <p>
+                <span className="font-semibold text-white">Wilayah:</span>{" "}
+                {business.address}
+              </p>
+
+              <p>
+                <span className="font-semibold text-white">
+                  Jam Operasional:
+                </span>{" "}
+                {business.hours}
+              </p>
+            </div>
           </div>
-          <a
-            href={whatsappLink}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-7 inline-flex w-fit rounded-full bg-yellow-400 px-6 py-3 font-black text-slate-950 transition hover:bg-yellow-300"
-          >
-            Hubungi Admin
-          </a>
-          <p className="mt-10 border-t border-slate-700 pt-6 text-sm text-slate-500">
-            © 2026 {business.shortName}. Prototype landing page untuk project Digital Business UTS.
-          </p>
         </div>
+
+        <div>
+          <h3 className="text-lg font-extrabold text-yellow-400">
+            Cabang Jaya Makmur Ban
+          </h3>
+
+          <div className="mt-5 space-y-4">
+            {branches.map((branch) => (
+              <div
+                key={branch.name}
+                className="rounded-2xl border border-white/10 bg-white/5 p-5 transition duration-300 hover:border-yellow-400/40 hover:bg-white/10"
+              >
+                <p className="font-bold text-white">{branch.name}</p>
+
+                <p className="mt-1 text-sm text-slate-300">
+                  {branch.location}
+                </p>
+
+                {branch.mapsUrl && (
+                  <a
+                    href={branch.mapsUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 inline-flex rounded-full border border-yellow-400/40 px-4 py-2 text-sm font-bold text-yellow-300 transition duration-300 hover:bg-yellow-400 hover:text-slate-950"
+                  >
+                    Lihat di Google Maps
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-12 max-w-6xl border-t border-white/10 pt-6 text-center text-sm text-slate-400">
+        <p>
+          © {new Date().getFullYear()} {business.name}. Landing page project UTS
+          Digital Business.
+        </p>
       </div>
     </footer>
   );
